@@ -1,6 +1,7 @@
 import openpyxl
 from github import Github
 import os
+from datetime import datetime
 
 github_token = os.environ['GITHUB_TOKEN']
 
@@ -18,7 +19,7 @@ latest_commit = repo.get_commits()[0]
 commit_sha = latest_commit.sha
 commit_message = latest_commit.commit.message
 commit_author = latest_commit.commit.author.name
-commit_date = latest_commit.commit.author.date
+commit_date = latest_commit.commit.author.date.replace(tzinfo=None).strftime('%Y-%m-%d %H:%M:%S')
 
 wb = openpyxl.load_workbook(excel_file_path)
 sheet = wb.active
