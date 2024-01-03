@@ -27,3 +27,5 @@ jobs:
       run: |
         python update_excel.py
       shell: bash
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
