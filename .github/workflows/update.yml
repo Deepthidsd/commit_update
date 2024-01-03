@@ -1,0 +1,29 @@
+name: Update Excel on New Commit
+
+on:
+  push:
+    branches:
+      - master  
+
+jobs:
+  update-excel:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        pip install openpyxl PyGithub
+      shell: bash
+
+    - name: Update Excel on new commit
+      run: |
+        python update_excel.py
+      shell: bash
