@@ -7,7 +7,7 @@ github_token = os.environ['GITHUB_TOKEN']
 repo_owner = 'Deepthidsd'
 repo_name = 'commit_update'
 
-excel_file_path = 'commit_update/file.xlsx'
+excel_file_path = 'file.xlsx'
 
 g = Github(github_token)
 
