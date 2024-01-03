@@ -4,8 +4,8 @@ import os
 
 github_token = os.environ['GITHUB_TOKEN']
 
-repo_owner = 'your_username'
-repo_name = 'your_repository'
+repo_owner = 'Deepthidsd'
+repo_name = 'commit_update'
 
 excel_file_path = 'path/to/your/excel/file.xlsx'
 
