@@ -3,7 +3,7 @@ name: Update Excel on New Commit
 on:
   push:
     branches:
-      - master  
+      - main 
 
 jobs:
   update-excel:
