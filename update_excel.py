@@ -4,7 +4,6 @@ import os
 from datetime import datetime
 
 github_token = os.environ['GITHUB_TOKEN']
-
 repo_owner = 'Deepthidsd'
 repo_name = 'commit_update'
 
